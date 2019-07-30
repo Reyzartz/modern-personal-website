@@ -1,0 +1,16 @@
+{
+  "name": "personal-portfolio",
+  "version": "1.0.0",
+  "description": "a persnal portfolio website",
+  "main": "index.html",
+  "scripts": {
+    "deploy":"gh-pages -d dist",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Reyzartz",
+  "license": "ISC",
+  "homepage": "https://reyzartz.github.io/morden-personal-website",
+  "dependencies": {
+    "gh-pages": "^2.0.1"
+  }
+}
