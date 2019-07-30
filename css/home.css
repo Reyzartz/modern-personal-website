@@ -1,0 +1,121 @@
+*{
+    margin: none;
+    padding: none;
+    list-style: none;
+    scroll-behavior: smooth;
+    text-decoration:none;
+    box-sizing: border-box;
+    color:white;
+    font-family: sans-serif;
+    overflow: show;
+}
+#lines{
+    height: 100vw;
+    width: 100vw;
+    z-index: -100;
+    position: absolute;
+    top: 0px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+#lines div{
+    height: 100%;
+    border-left: 1.5px #000 solid;
+    border-right: 0.5px #444 solid;
+}
+
+#navbar{
+    width: 100%;
+}
+#navbar ul{
+    position: fixed;
+}
+#navbar ul li{
+    display: inline;
+    padding: 7px 8px;
+    color: #222;
+    font-weight: bolder;
+    background-color: rgba(255,255,255,0.4);
+}
+#navbar ul li a{
+    color: #222;
+    font-size: 18px;
+}
+#navbar ul li:hover{
+    background-color: #ff571a73;
+    
+}
+#navbar ul li:nth-last-child(2){
+    background-color: #ff571a70;
+    padding-bottom: 500px;
+    z-index: -11;
+}
+#navbar ul li:nth-last-child(2) a:hover{
+    background-color: rgba(255,255,255,0.4);
+}
+#home-page{
+    background-color: #222;
+    display: grid;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+#hey{
+    
+    position: absolute;
+    top:10vh;
+    left:20vw;
+    z-index: -10;
+    font-weight: bolder;
+    color: rgba(255,255,255,0.1);
+    font-size: 35vw;
+}
+#greet{
+    background-color: rgba(255,255,255,0.3);
+    position: absolute;
+    top:30%;
+    left:60%;
+    font-size:30px;
+    width: 50vh;
+}
+.orange{
+    color:#ff581a;
+    font-weight: 100;
+    text-shadow: 3px 5px 5px #222;
+    text-decoration: line-through;
+}
+#greet h1{
+    margin:2px;
+    position: relative;
+    top:-17px;
+    right:17px;
+    color: #fff;
+}
+#description{
+    background-color: rgba(255,255,255,0.4);
+    position: absolute;
+    top: 60%;
+    right:40%;
+    width: 55%;
+    text-align: left;
+    font-size: 20px;
+}
+#description p{
+    margin:5px;
+    position: relative;
+    top:-20px;
+    left:35px;
+    color: #fff;
+}
+#sqr1{
+    height:8vw;
+    width: 8vw;
+    background-color: transparent;
+    border: 2vw solid #ff571a73;
+    position: absolute;
+     bottom:20vh;
+     right:10vh;
+}
+#about{
+    height:15000px;
+}
