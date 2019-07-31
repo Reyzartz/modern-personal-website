@@ -1,0 +1,66 @@
+#bg_lines{
+    height: inherit;
+    width: 100vw;
+    z-index: -10;
+    position: absolute;
+    top: 0px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+#bg_lines div{
+    z-index: -10;
+    height: 100%;
+    border-left: 1.5px #000 solid;
+    border-right: 0.5px #444 solid;
+}
+#cir2{
+    z-index: -12;
+    height:9vw;
+    width: 9vw;
+    background-color: #ff571a73;
+    position: absolute;
+     top:65%;
+     left:50%;
+}
+#cir2 div{
+    height: 9vw;
+    width: 9vw;
+    border: .8vw #222 solid;
+    border-radius: 50%;
+    position: relative;
+    top:10%;
+    right:10%;
+}
+#sqr1{
+    z-index:-12;
+    height:8vw;
+    width: 8vw;
+    background-color: transparent;
+    border: .7vw solid #ff571a73;
+    position: absolute;
+     bottom:20vh;
+     right:14vh;
+}
+#cir1{
+    z-index: -12;
+    height:9vw;
+    width: 9vw;
+    background-color: transparent;
+    border: .7vw solid #ff571a73;
+    border-radius: 50%;
+    position: absolute;
+     top:24vh;
+     left:10vh;
+}
+#cross1{
+    z-index: -12;
+    height:8vw;
+    width: 8vw;
+    background-color: #ff571a73;
+    font-size: 9vw;
+    color: #222;
+    font-weight: bolder;
+    position: absolute;
+     top:15vh;
+     right:35vh;
+}
