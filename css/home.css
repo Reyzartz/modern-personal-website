@@ -1,40 +1,39 @@
 *{
-    margin: none;
-    padding: none;
+    margin: 0;
+    padding: 0;
     list-style: none;
     scroll-behavior: smooth;
     text-decoration:none;
     box-sizing: border-box;
-    color:white;
+    color:rgba(255,255,255,0.75);
     font-family: sans-serif;
     overflow: show;
+
 }
-#lines{
-    height: 100vw;
-    width: 100vw;
-    z-index: -100;
-    position: absolute;
-    top: 0px;
+#main-page{
+    background-color: #222;
+    margin: 0;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-}
-#lines div{
+    width: 100%;
     height: 100%;
-    border-left: 1.5px #000 solid;
-    border-right: 0.5px #444 solid;
+    position: relative;
+    overflow-x: hidden;
 }
 
+
 #navbar{
+    margin: 20px;
+    z-index: 10;
     width: 100%;
 }
 #navbar ul{
     position: fixed;
+    z-index: 11;
 }
 #navbar ul li{
     display: inline;
     padding: 7px 8px;
     color: #222;
-    font-weight: bolder;
     background-color: rgba(255,255,255,0.4);
 }
 #navbar ul li a{
@@ -47,21 +46,17 @@
 }
 #navbar ul li:nth-last-child(2){
     background-color: #ff571a70;
-    padding-bottom: 500px;
-    z-index: -11;
+    padding-bottom: 0;
+
 }
 #navbar ul li:nth-last-child(2) a:hover{
     background-color: rgba(255,255,255,0.4);
 }
-#home-page{
-    background-color: #222;
-    display: grid;
-    width: 100%;
-    height: 100%;
-    position: relative;
+
+#home{
+    height: 100vh;
 }
-#hey{
-    
+#hey,#about_big_text{
     position: absolute;
     top:10vh;
     left:20vw;
@@ -75,23 +70,26 @@
     position: absolute;
     top:30%;
     left:60%;
+    z-index: 7;
     font-size:30px;
     width: 50vh;
 }
 .orange{
-    color:#ff581a;
+    background-color: #ff571aa1;
+    background-clip: text;
+    -moz-background-clip: text;
     font-weight: 100;
-    text-shadow: 3px 5px 5px #222;
-    text-decoration: line-through;
+    font-style: italic;
+    text-decoration:underline;
 }
 #greet h1{
     margin:2px;
     position: relative;
     top:-17px;
     right:17px;
-    color: #fff;
 }
-#description{
+#description,#skills_description,#about_description{
+    z-index: 7;
     background-color: rgba(255,255,255,0.4);
     position: absolute;
     top: 60%;
@@ -100,22 +98,40 @@
     text-align: left;
     font-size: 20px;
 }
-#description p{
+#description p,#about_description p{
     margin:5px;
     position: relative;
     top:-20px;
     left:35px;
-    color: #fff;
 }
-#sqr1{
-    height:8vw;
-    width: 8vw;
-    background-color: transparent;
-    border: 2vw solid #ff571a73;
-    position: absolute;
-     bottom:20vh;
-     right:10vh;
-}
+
+/*****************************skills**********************************/
 #about{
-    height:15000px;
+    height:100vh;
+    position: relative;
+}
+#about_description{
+    top:20%;
+    left:2%;
+    width:40%;
+    width:auto;
+}
+#about_big_text{
+    top:80%;
+    left: -6vw;
+}
+#skills_description{
+    top:45%;
+    right:10%;
+    width:auto;
+}
+#skills_description h1{
+    font-size: 55px;
+    padding: 0px 10px;
+}
+#skills_description ul{
+    padding: 10px 10px
+}
+.test{
+    height: 10000px;
 }
