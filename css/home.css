@@ -185,30 +185,12 @@
         left: 40%;
         width: 60%;
         font-size:30px;
-        animation: slideInRight .5s forwards;
-    }
-    @keyframes slideInRight{
-        0%{
-            left:100%;
-        }
-        100%{
-            left:40%;
-        }
     }
     #description{
         top: 55vh;
         right:45%;
         width: 60%;
         z-index: 11;
-        animation: slideInLeft .5s forwards;
-    }
-    @keyframes slideInLeft{
-        0%{
-            right:100%;
-        }
-        100%{
-            right:45%;
-        }
     }
     #about_description{
         top:18%;
