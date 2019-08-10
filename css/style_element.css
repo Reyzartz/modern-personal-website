@@ -1,17 +1,42 @@
-#bg_lines{
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    scroll-behavior: smooth;
+    text-decoration:none;
+    box-sizing: border-box;
+    color:rgba(255,255,255,0.75);
+    font-family: 'Roboto', sans-serif;
+}
+.bg_lines{
     height: inherit;
     width: 100vw;
-    z-index: -10;
+    z-index: -11;
     position: absolute;
     top: 0px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(10,1fr);
 }
-#bg_lines div{
+.bg_lines div{
     z-index: -10;
     height: 100%;
     border-left: 1.5px #000 solid;
     border-right: 0.5px #444 solid;
+}
+.big_text{
+    position: absolute;
+    z-index: -10;
+    font-weight: bolder;
+    color: rgba(255,255,255,0.1);
+    font-size: 35vw;
+}
+.orange{
+    background-color: #ff571aa1;
+    background-clip: text;
+    -moz-background-clip: text;
+    font-weight: 100;
+    font-style: italic;
+    text-decoration:underline;
 }
 #cir2{
     z-index: -12;
@@ -20,7 +45,7 @@
     background-color: #ff571a73;
     position: absolute;
      top:65%;
-     left:50%;
+     left:30%;
 }
 #cir2 div{
     height: 9vw;
@@ -38,7 +63,7 @@
     background-color: transparent;
     border: .7vw solid #ff571a73;
     position: absolute;
-     bottom:20vh;
+     top:80vh;
      right:14vh;
 }
 #cir1{
@@ -46,7 +71,7 @@
     height:9vw;
     width: 9vw;
     background-color: transparent;
-    border: .7vw solid #ff571a73;
+    border: 2vw solid #ff571a73;
     border-radius: 50%;
     position: absolute;
      top:24vh;
@@ -63,4 +88,42 @@
     position: absolute;
      top:15vh;
      right:35vh;
+}
+@media(max-width:776px){
+    .bg_lines{
+        grid-template-columns: repeat(5,1fr)
+    }
+    .bg_lines div:nth-child(even){
+        display:none;
+    }
+    #cir1{
+        height:15vw;
+        width: 15vw;
+        background-color: transparent;
+        border: 4vw solid #ff571a73;
+    }
+    #sqr1{
+        height:15vw;
+        width: 15vw;
+        border: 4vw solid #ff571a73;
+         top:65vh;
+    }
+    #cross1{
+        height:10vw;
+        width: 10vw;
+        font-size: 11vw;   
+    }
+    #cir2{
+        height:15vw;
+        width: 15vw;
+        background-color: #ff571a73;
+        position: absolute;
+         top:70%;
+         left:33%;
+    }
+    #cir2 div{
+        height: 15vw;
+        width: 15vw;
+        border: 3vw #222 solid;
+    }
 }

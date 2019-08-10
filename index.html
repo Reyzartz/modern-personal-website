@@ -6,11 +6,16 @@
     <title>ReyzArtz</title>
     <link rel="stylesheet" href="./css/home.css" type="text/css">
     <link rel="stylesheet" href="./css/style_element.css" type="text/css">
-    
+    <link rel="stylesheet" href="./css/navbar.css">
+    <link rel="stylesheet" href="/css/projects.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300i,400,700,900&display=swap" rel="stylesheet">
 </head>
 
 <body id="main-page">
-    <div id="bg_lines">
+    <div class="bg_lines">
+        <div></div>
+        <div></div>
+        <div></div>
         <div></div>
         <div></div>
         <div></div>
@@ -23,14 +28,13 @@
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#">Projects</a></li>
-                <li class="orange-bg"><a>Gallery</a></li>
-                <li><a href="#">Contact Me</a></li>
+                <li><a href="./projects_page.html">Projects</a></li>
+                <li><a href="#contact-me">Contact Me</a></li>
             </ul>
         </nav>
     </header>
     <section id="home">
-        <div id="hey">Hey,I am</div>
+        <div id="hey_bg_text" class="big_text">Hey,I am</div>
         <div id="sqr1"></div>
         <div id="cir1"></div>
         <div id="cross1">X</div>
@@ -45,23 +49,15 @@
     </section>
     
     <section id="about">
-        <div id="bg_lines">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
         <div id="sqr1"></div>
         <div id="cir2"><div></div></div>
         <div id="cross1">X</div>
-            <div id="about_big_text">About</div>
+            <div id="about_bg_text" class="big_text">About</div>
             <div id="skills_description"><p>
-                <h1>Skills</h1>
+                <h1><span class="orange">Skills</span></h1>
                 <ul>
                 <li>
-                    <span class="orange">Programming Languages</span>
+                    Programming Languages
                     <ul>
                         <li>C</li>
                         <li>C++</li>
@@ -86,9 +82,40 @@
         </p></div>
                             
     </section>
-    <section class="test">
+    
+</section>
+<section id="contact-me" >
+    <div id="contact-bg-text" class="big_text">
+        Contact
+    </div>
+    <div id="contact-links">
+        <div>
+            <div class="contact-link">
+                <img src="./assets/Icons/linkedin.png">
+                <a>LinkeDin</a>
+            </div>
+        </div>
+        <div>
+            <div class="contact-link">
+                <img src="./assets/Icons/github.png">
+                <a>Github</a>
+            </div>
+        </div>
+        <div>
+            <div class="contact-link">
+                <img src="./assets/Icons/gmail.png">
+                <a style="font-size:25px;">reyanrahman@gmail.com</a>
+            </div>
+        </div>
+        <div>
+            <div class="contact-link">
+                <img src="./assets/Icons/twitter.png">
+                <a>Twitter</a>
+            </div>
+        </div>
+    </div>
+</section>
 
-    </section>
     <script src="./js/script.js"></script>
 </body>
 </html>
