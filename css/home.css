@@ -170,7 +170,7 @@
     }
     #contact-bg-text{
         font-size: 25vw;
-        top:-2%;
+        top:2%;
         left:0%;
     }
 }
@@ -193,11 +193,22 @@
         z-index: 11;
     }
     #about_description{
-        top:15%;
+        top:18%;
         left: -5%;
-        width:90%
+        width:90%;
+        font-size:18px;
+        animation: slideIn .5s forwards;
+    }
+    @keyframes slideIn {
+        0%{
+            left:-100%;
+        }
+        100%{
+            left:-5%;
+        }
     }
     #skills_description{
+        font-size:18px;
         top: 61vh;
         right:0%;
         width: 75%;
@@ -206,4 +217,10 @@
         top:-2%;
         left: -2vw;
     }
+    #contact-me{
+        height:80vh;
+    }
+    #contact-links{
+        top:25%;
+        }
 }
