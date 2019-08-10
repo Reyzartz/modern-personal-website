@@ -6,81 +6,34 @@
     text-decoration:none;
     box-sizing: border-box;
     color:rgba(255,255,255,0.75);
-    font-family: sans-serif;
-    overflow: show;
-
+    font-family: 'Roboto', sans-serif;
 }
 #main-page{
     background-color: #222;
     margin: 0;
     display: grid;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height:200vh;
     position: relative;
     overflow-x: hidden;
 }
 
-
-#navbar{
-    margin: 20px;
-    z-index: 10;
-    width: 100%;
-}
-#navbar ul{
-    position: fixed;
-    z-index: 11;
-}
-#navbar ul li{
-    display: inline;
-    padding: 7px 8px;
-    color: #222;
-    background-color: rgba(255,255,255,0.4);
-}
-#navbar ul li a{
-    color: #222;
-    font-size: 18px;
-}
-#navbar ul li:hover{
-    background-color: #ff571a73;
-    
-}
-#navbar ul li:nth-last-child(2){
-    background-color: #ff571a70;
-    padding-bottom: 0;
-
-}
-#navbar ul li:nth-last-child(2) a:hover{
-    background-color: rgba(255,255,255,0.4);
-}
-
 #home{
     height: 100vh;
+    width: 100vw;
 }
-#hey,#about_big_text{
-    position: absolute;
+#hey_bg_text{
     top:10vh;
     left:20vw;
-    z-index: -10;
-    font-weight: bolder;
-    color: rgba(255,255,255,0.1);
-    font-size: 35vw;
 }
 #greet{
     background-color: rgba(255,255,255,0.3);
     position: absolute;
-    top:30%;
+    top:30vh;
     left:60%;
     z-index: 7;
     font-size:30px;
     width: 50vh;
-}
-.orange{
-    background-color: #ff571aa1;
-    background-clip: text;
-    -moz-background-clip: text;
-    font-weight: 100;
-    font-style: italic;
-    text-decoration:underline;
 }
 #greet h1{
     margin:2px;
@@ -92,7 +45,7 @@
     z-index: 7;
     background-color: rgba(255,255,255,0.4);
     position: absolute;
-    top: 60%;
+    top: 60vh;
     right:40%;
     width: 55%;
     text-align: left;
@@ -105,24 +58,23 @@
     left:35px;
 }
 
-/*****************************skills**********************************/
+/*****************************about**********************************/
 #about{
     height:100vh;
     position: relative;
 }
 #about_description{
-    top:20%;
+    top:30%;
     left:2%;
-    width:40%;
-    width:auto;
+    width:50%;
 }
-#about_big_text{
+#about_bg_text{
     top:80%;
     left: -6vw;
 }
 #skills_description{
-    top:45%;
-    right:10%;
+    top:55%;
+    right:15%;
     width:auto;
 }
 #skills_description h1{
@@ -132,6 +84,104 @@
 #skills_description ul{
     padding: 10px 10px
 }
-.test{
-    height: 10000px;
+/*****************************Contact-me***********************/
+#contact-me{
+    width:100%;
+    height:70vh;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+#contact-bg-text{
+    font-size: 18vw;
+    top:23%;
+}
+#contact-links{
+    width: 100%;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width:776px){
+    #hey_bg_text{
+        top:20vh;
+        left:0vw;
+        font-size:50vw;
+    }
+    #greet{
+        top:15%;
+        left:45%;
+        z-index: 7;
+        font-size:40px;
+        width: 50vh;
+    }
+    #description{
+        top: 60vh;
+        right:45%;
+        width: 55%;
+        z-index: 11;
+    }
+    #about_description{
+        top:25%;
+        right: 0%;
+        width:80%
+    }
+    #skills_description{
+        top: 70vh;
+        right:0%;
+        width: 55%;
+    }
+    #about_bg_text{
+        top:110%;
+        left: -6vw;
+    }
+}
+@media(max-width:550px){
+    #hey_bg_text{
+        top:20vh;
+        left:0vw;
+        font-size:45vw;
+    }
+    #greet{
+        top:12%;
+        left: 40%;
+        width: 60%;
+        font-size:30px;
+    }
+    #description{
+        top: 55vh;
+        right:45%;
+        width: 60%;
+        z-index: 11;
+    }
+    #about_description{
+        top:15%;
+        left: -5%;
+        width:90%
+    }
+    #skills_description{
+        top: 61vh;
+        right:0%;
+        width: 75%;
+    }
+    #about_bg_text{
+        top:0%;
+        left: -6vw;
+    }
 }

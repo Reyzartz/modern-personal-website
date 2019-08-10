@@ -1,0 +1,32 @@
+#navbar{
+    margin: 20px;
+    z-index: 10;
+    width: 100%;
+}
+#navbar ul{
+    position: fixed;
+    z-index: 11;
+}
+#navbar ul li{
+    display: inline;
+    padding: 7px 8px;
+    color: #222;
+    background-color: rgba(255,255,255,0.4);
+}
+#navbar ul li a{
+    color: #222;
+    font-size: 18px;
+}
+#navbar ul li:hover{
+    background-color: #ff571a73;
+    
+}
+#navbar ul li:nth-last-child(2){
+    background-color: #ff571a70;
+    padding-bottom: 8px;
+    z-index: -7;
+
+}
+#navbar ul li:nth-last-child(2):hover{
+    background-color: rgba(255,255,255,0.4);
+}

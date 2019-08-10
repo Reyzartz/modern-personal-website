@@ -2,12 +2,12 @@ window.addEventListener("DOMContentLoaded",scrollLoop,false);
 
 let xScrollPosition,yScrollPosition;
 
-let HeyText=document.getElementById("hey"),
+let HeyText=document.getElementById("hey_bg_text"),
  sqr1=document.getElementById("sqr1"),
  cir1=document.getElementById("cir1"),
  cross1=document.getElementById("cross1"),
  navEl=document.getElementById("navbar").children[0], 
- navElgallery=navEl.children[3],
+ navElgallery=navEl.children[2],
  greetback=document.getElementById("greet"),
  greetText=greet.children[0],
  skillsBack=document.getElementById("skills_description"),
@@ -16,15 +16,16 @@ let HeyText=document.getElementById("hey"),
  descriptionText=descriptionback.children[0],
  aboutDescriptionBack=document.getElementById("about_description"),
  aboutDescriptionText=aboutDescriptionBack.children[0],
- AboutText=document.getElementById("about_big_text");
+ AboutText=document.getElementById("about_bg_text"),
+ ProjectsText=document.getElementById("projects_bg_text");
 
  let k=500;
 
-console.log(navElgallery);
+console.log(innerWidth);
 function scrollLoop(){
     xScrollPosition=window.scrollX;
     yScrollPosition=window.scrollY;
-
+if(innerWidth>600){
     setTranslate(0,yScrollPosition*0.1,greetText);
     setTranslate(yScrollPosition,yScrollPosition*-0.1,greetback);
     setTranslate(0,yScrollPosition*0.1,descriptionText);
@@ -40,21 +41,22 @@ function scrollLoop(){
     }
     setTranslate(0,yScrollPosition*-1.5,HeyText);
     
-
-    setTranslate(0,yScrollPosition*0.2,sqr1,yScrollPosition);
-    setTranslate(0,yScrollPosition*0.2,cir1,yScrollPosition)
-    setTranslate(0,yScrollPosition*0.2,cross1,yScrollPosition)
     
 
-    if(yScrollPosition<(innerWidth-480))
+    setTranslate(0,yScrollPosition*0.2,sqr1);
+    setTranslate(0,yScrollPosition*0.2,cir1)
+    setTranslate(0,yScrollPosition*0.2,cross1)
+    
+
+    if(yScrollPosition<(innerWidth-380))
     setTranslate(yScrollPosition,0,navEl);
 
     if(800-(yScrollPosition*1.12)>=6)
     navElgallery.style.paddingBottom=`${800-(yScrollPosition*1.12)}px`
 
+}
+
     requestAnimationFrame(scrollLoop);
 }
 
-function setTranslate(xPos, yPos, el,zpos=0) {
-    el.style.transform = `translate3d(${xPos}px, ${yPos}px, ${zpos})`;
-}
+const setTranslate=(xPos, yPos, el,zpos=0)=> el.style.transform = `translate3d(${xPos}px, ${yPos}px, ${zpos})`;
