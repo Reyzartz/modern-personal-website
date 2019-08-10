@@ -108,11 +108,12 @@
     #projects_tiles{
         grid-template-columns: 1fr;
         padding: 0px;
-    }
+        margin-top:15vh;
+        }
 
     #projects_bg_text{
-        top:1vh;
-        left:-2vw;
+        top:5vh;
+        left:-4vw;
         font-size: 28vw;
     }
 }

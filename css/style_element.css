@@ -127,3 +127,37 @@
         border: 3vw #222 solid;
     }
 }
+@media(max-width:550px){
+    #cir1{
+        height:20vw;
+        width: 20vw;
+        background-color: transparent;
+        border: 5vw solid #ff571a73;
+    }
+    #sqr1{
+        height:20vw;
+        width: 20vw;
+        border: 5vw solid #ff571a73;
+         top:65vh;
+    }
+    #cross1{
+        height:20vw;
+        width: 20vw;
+        right:20vw;
+        font-size: 22vw;   
+    }
+    #cir2{
+        height:20vw;
+        width: 20vw;
+        background-color: #ff571a73;
+        position: absolute;
+         top:80%;
+         left:0%;
+    }
+    #cir2 div{
+        height: 20vw;
+        width: 20vw;
+        border: 4vw #222 solid;
+    }
+}
+

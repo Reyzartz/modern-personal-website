@@ -55,7 +55,7 @@ if(innerWidth>600){
 
     /*******************for Contact************************************** */
         for(let i=0;i<contactLinks.length;i++){
-            yPos=9*i+(yScrollPosition-(innerHeight+innerHeight*.7))*(-0.3*(3-i))
+            yPos=15.5*i+(yScrollPosition-(innerHeight+innerHeight*.7))*(-0.3*(3-i))
             setTranslate(yPos,0,contactLinks[i]);
         }
     

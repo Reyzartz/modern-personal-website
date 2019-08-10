@@ -170,7 +170,7 @@
     }
     #contact-bg-text{
         font-size: 25vw;
-        top:-2%;
+        top:2%;
         left:0%;
     }
 }
@@ -185,19 +185,40 @@
         left: 40%;
         width: 60%;
         font-size:30px;
+        animation: slideInRight .5s forwards;
+    }
+    @keyframes slideInRight{
+        0%{
+            left:100%;
+        }
+        100%{
+            left:40%;
+        }
     }
     #description{
         top: 55vh;
         right:45%;
         width: 60%;
         z-index: 11;
+        animation: slideInLeft .5s forwards;
+    }
+    @keyframes slideInLeft{
+        0%{
+            right:100%;
+        }
+        100%{
+            right:45%;
+        }
     }
     #about_description{
-        top:15%;
+        top:18%;
         left: -5%;
-        width:90%
+        width:90%;
+        font-size:18px;
     }
+    
     #skills_description{
+        font-size:18px;
         top: 61vh;
         right:0%;
         width: 75%;
@@ -206,4 +227,10 @@
         top:-2%;
         left: -2vw;
     }
+    #contact-me{
+        height:80vh;
+    }
+    #contact-links{
+        top:25%;
+        }
 }
