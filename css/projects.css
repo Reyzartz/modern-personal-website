@@ -102,7 +102,17 @@
     margin: 5% 10%;
 }
 @media (max-width:776px){
+    .project{
+        height: auto;
+    }
     #projects_tiles{
         grid-template-columns: 1fr;
+        padding: 0px;
+    }
+
+    #projects_bg_text{
+        top:1vh;
+        left:-2vw;
+        font-size: 28vw;
     }
 }

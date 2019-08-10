@@ -18,42 +18,47 @@ let HeyText=document.getElementById("hey_bg_text"),
  aboutDescriptionText=aboutDescriptionBack.children[0],
  AboutText=document.getElementById("about_bg_text"),
  ProjectsText=document.getElementById("projects_bg_text");
+ contactLinks=document.getElementById("contact-links").children;
 
- let k=500;
-
+ let yPos;
 console.log(innerWidth);
 function scrollLoop(){
     xScrollPosition=window.scrollX;
     yScrollPosition=window.scrollY;
+
+
 if(innerWidth>600){
+    /*************Style Elements*********************************************/
+    setTranslate(0,yScrollPosition*-1.5,HeyText);
+    setTranslate(0,yScrollPosition*-1.5+innerHeight,AboutText);
+    setTranslate(0,yScrollPosition*0.2,sqr1);
+    setTranslate(0,yScrollPosition*0.2,cir1)
+    setTranslate(0,yScrollPosition*0.2,cross1)
+    /************For Home**************************************************/
     setTranslate(0,yScrollPosition*0.1,greetText);
     setTranslate(yScrollPosition,yScrollPosition*-0.1,greetback);
     setTranslate(0,yScrollPosition*0.1,descriptionText);
     setTranslate(yScrollPosition*-1,yScrollPosition*-0.1,descriptionback);
     
-    /************For About***********/
+    /************For About*************************************************/
     if(yScrollPosition<innerHeight){
         setTranslate(yScrollPosition*-1+innerHeight,yScrollPosition*-0.1,skillsBack);
         setTranslate(0,yScrollPosition*0.1+innerHeight,skillsText);
-        setTranslate(0,yScrollPosition*-1.5+innerHeight,AboutText);
         setTranslate(0,yScrollPosition*-0.01, aboutDescriptionText );
         setTranslate(yScrollPosition*1-innerHeight,yScrollPosition*-0.1,aboutDescriptionBack);
     }
-    setTranslate(0,yScrollPosition*-1.5,HeyText);
-    
-    
-
-    setTranslate(0,yScrollPosition*0.2,sqr1);
-    setTranslate(0,yScrollPosition*0.2,cir1)
-    setTranslate(0,yScrollPosition*0.2,cross1)
-    
-
     if(yScrollPosition<(innerWidth-380))
     setTranslate(yScrollPosition,0,navEl);
 
     if(800-(yScrollPosition*1.12)>=6)
-    navElgallery.style.paddingBottom=`${800-(yScrollPosition*1.12)}px`
+    navElgallery.style.paddingBottom=`${800-(yScrollPosition*1.12)}px`;
 
+    /*******************for Contact************************************** */
+        for(let i=0;i<contactLinks.length;i++){
+            yPos=9*i+(yScrollPosition-(innerHeight+innerHeight*.7))*(-0.3*(3-i))
+            setTranslate(yPos,0,contactLinks[i]);
+        }
+    
 }
 
     requestAnimationFrame(scrollLoop);

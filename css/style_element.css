@@ -11,7 +11,7 @@
 .bg_lines{
     height: inherit;
     width: 100vw;
-    z-index: -10;
+    z-index: -11;
     position: absolute;
     top: 0px;
     display: grid;
@@ -90,6 +90,12 @@
      right:35vh;
 }
 @media(max-width:776px){
+    .bg_lines{
+        grid-template-columns: repeat(5,1fr)
+    }
+    .bg_lines div:nth-child(even){
+        display:none;
+    }
     #cir1{
         height:15vw;
         width: 15vw;
