@@ -33,7 +33,7 @@
     cursor: pointer;
 }
 .project_image{
-    height: 80%;
+    height: 75%;
     display:grid;
     position: relative;
     grid-template-columns: 1fr 1fr;
@@ -44,19 +44,20 @@
     height: 100%;
     width: 100%;
     z-index: 5;
-    font-size: 50px;
-    font-weight: bolder;
-    padding-top:25%;
-    transition: transform font .3s;
+    transition: transform  .3s,background-size .3s;
     text-align: center;
+    background-size: cover;
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 .project_image a:hover{
-    font-size: 60px;
+    background-size: 60%;
 } 
 .project_image a:nth-child(odd){
     transform: translateX(-110%);
-    color:rgba(0,0,0,0.8);
-    background-color: #ff571ade;
+    background-color: #ff571acc;
+    background-image:url(../assets/Icons/Web-page.png)
 }
 .project .project_image:hover a:nth-child(odd){
     transform: translateX(0%);
@@ -64,8 +65,10 @@
 }
 .project_image a:nth-child(even){
     color:#ff571aea;
+    filter: invert(1);
     transform: translateX(100%);
-    background-color: rgba(0,0,0,0.9);
+    background-color: rgba(255,255,255,0.9);
+    background-image:url(../assets/Icons/Src-Code.png)
 }
 .project .project_image:hover a:nth-child(even){
     transform: translateX(0%);
@@ -80,10 +83,16 @@
     left:0;
     object-fit: cover;
     object-position: center;
+    object-position: top;
+}
+.project h1{
+    font-size: 35px;
+    height: min-content;
+    padding: 5px 8px;
 }
 .project p{
-    height: 20%;
-    padding-top:5px;
+    height: 25%;
+    padding: 5px 0;
     font-size:15px;
 }
 #modal{
@@ -103,11 +112,11 @@
 }
 @media (max-width:776px){
     .project{
-        height: auto;
+        height: 70vh;
     }
     #projects_tiles{
         grid-template-columns: 1fr;
-        padding: 0px;
+        padding: 0 20px;
         margin-top:15vh;
         }
 

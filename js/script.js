@@ -18,45 +18,55 @@ let HeyText=document.getElementById("hey_bg_text"),
  aboutDescriptionText=aboutDescriptionBack.children[0],
  AboutText=document.getElementById("about_bg_text"),
  ProjectsText=document.getElementById("projects_bg_text");
+ ContactText=document.getElementById("contact-bg-text");
  contactLinks=document.getElementById("contact-links").children;
 
  let yPos;
-console.log(innerWidth);
 function scrollLoop(){
     xScrollPosition=window.scrollX;
     yScrollPosition=window.scrollY;
 
 
-if(innerWidth>600){
+if(innerWidth>600 && yScrollPosition<2.04*innerHeight){
     /*************Style Elements*********************************************/
     setTranslate(0,yScrollPosition*-1.5,HeyText);
     setTranslate(0,yScrollPosition*-1.5+innerHeight,AboutText);
+    setTranslate(0,yScrollPosition*-1.5+2*innerHeight,ContactText);
     setTranslate(0,yScrollPosition*0.2,sqr1);
     setTranslate(0,yScrollPosition*0.2,cir1)
     setTranslate(0,yScrollPosition*0.2,cross1)
-    /************For Home**************************************************/
+    /*************NavBar***********************************************************/
+    
+    if(yScrollPosition<(innerWidth-380))
+    setTranslate(yScrollPosition,0,navEl);
+
+    /************Home**************************************************/
     setTranslate(0,yScrollPosition*0.1,greetText);
     setTranslate(yScrollPosition,yScrollPosition*-0.1,greetback);
     setTranslate(0,yScrollPosition*0.1,descriptionText);
     setTranslate(yScrollPosition*-1,yScrollPosition*-0.1,descriptionback);
     
-    /************For About*************************************************/
+    /************About*************************************************/
     if(yScrollPosition<innerHeight){
         setTranslate(yScrollPosition*-1+innerHeight,yScrollPosition*-0.1,skillsBack);
-        setTranslate(0,yScrollPosition*0.1+innerHeight,skillsText);
-        setTranslate(0,yScrollPosition*-0.01, aboutDescriptionText );
+        setTranslate(0,yScrollPosition*-0.1,skillsText);
+        setTranslate(0,yScrollPosition*0.01, aboutDescriptionText );
         setTranslate(yScrollPosition*1-innerHeight,yScrollPosition*-0.1,aboutDescriptionBack);
     }
-    if(yScrollPosition<(innerWidth-380))
-    setTranslate(yScrollPosition,0,navEl);
+    else{
+        setTranslate(yScrollPosition*1-innerHeight,yScrollPosition*-0.1,skillsBack);
+        setTranslate(0,yScrollPosition*0.1-innerHeight,skillsText);
+        setTranslate(0,yScrollPosition*-0.01, aboutDescriptionText );
+        setTranslate(yScrollPosition*-1+innerHeight,yScrollPosition*-0.1,aboutDescriptionBack);
+    }
 
     if(800-(yScrollPosition*1.12)>=6)
     navElgallery.style.paddingBottom=`${800-(yScrollPosition*1.12)}px`;
 
     /*******************for Contact************************************** */
-        for(let i=0;i<contactLinks.length;i++){
-            yPos=15.5*i+(yScrollPosition-(innerHeight+innerHeight*.7))*(-0.3*(3-i))
-            setTranslate(yPos,0,contactLinks[i]);
+        for(let i=1;i<=contactLinks.length;i++){
+            yPos=-6*i+(yScrollPosition-(innerHeight+innerHeight))*(-0.3*(3-i))
+            setTranslate(yPos,0,contactLinks[i-1]);
         }
     
 }
