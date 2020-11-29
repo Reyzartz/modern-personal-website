@@ -33,7 +33,7 @@
     cursor: pointer;
 }
 .project_image{
-    height: 75%;
+    height: 100%;
     display:grid;
     position: relative;
     grid-template-columns: 1fr 1fr;
@@ -57,7 +57,7 @@
 .project_image a:nth-child(odd){
     transform: translateX(-110%);
     background-color: #ff571acc;
-    background-image:url(../assets/Icons/Web-page.png)
+    background-image:url(../assets/Icons/Src-Code.png)
 }
 .project .project_image:hover a:nth-child(odd){
     transform: translateX(0%);
@@ -68,7 +68,7 @@
     filter: invert(1);
     transform: translateX(100%);
     background-color: rgba(255,255,255,0.9);
-    background-image:url(../assets/Icons/Src-Code.png)
+    background-image:url(../assets/Icons/Web-page.png)
 }
 .project .project_image:hover a:nth-child(even){
     transform: translateX(0%);
@@ -97,7 +97,7 @@
 }
 #modal{
     transform: translateY("-110%");
-    position: absolute;
+    position: fixed;
     z-index: 10;
     height: 100%;
     width: 100%;
@@ -106,7 +106,7 @@
     transition:  transform .2s ease-out; 
 }
 #modal iframe{
-    height: 90%;
+    height: 80%;
     width: 80%;
     margin: 5% 10%;
 }

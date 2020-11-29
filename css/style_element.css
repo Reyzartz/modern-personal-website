@@ -27,7 +27,7 @@
     position: absolute;
     z-index: -10;
     font-weight: bolder;
-    color: rgba(255,255,255,0.1);
+    color: rgba(255,255,255,0.03);
     font-size: 35vw;
 }
 .orange{

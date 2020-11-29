@@ -27,12 +27,12 @@
     left:20vw;
 }
 #greet{
-    background-color: rgba(0,0,0,0.7);
+    background-color: rgba(0,0,0,0.6);
     position: absolute;
     top:30vh;
     left:60%;
     z-index: 7;
-    font-size:30px;
+    font-size:3vw;
     width: 50vh;
 }
 #greet h1{
@@ -43,12 +43,15 @@
 }
 #description,#skills_description,#about_description{
     z-index: 7;
-    background-color: rgba(0,0,0,0.7);
+    background-color: rgba(0,0,0,0.6);
     position: absolute;
     top: 60vh;
-    right:40%;
+    right:45%;
     width: 55%;
     text-align: left;
+    font-size: 2vw;
+}
+#skills_description,#about_description{
     font-size: 20px;
 }
 #description p,#about_description p{
