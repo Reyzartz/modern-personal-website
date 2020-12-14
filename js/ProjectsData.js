@@ -1,4 +1,5 @@
 const ProjectsData = [
+   
     {
         name:"Landing-page",
         description:"A landing page made in HTML, CSS, and vanilla Javascript, which gives the user a random background or they can add tags of the category of images they want, user can also get weather information and can also access multiple other websites from it",
@@ -20,6 +21,22 @@ const ProjectsData = [
         imgSrc:"./assets/images/visual_lab_editor.png",
         srcCode:"https://github.com/Reyzartz/React-and-firebase-instant-messaging-application",
         link:"https://reyzartz.github.io/visual_lab_Editor/"
+    },
+    {
+        name:"Potato-Blog",
+        description:"This a Bloging website made the help of Node,Express and MongoDB for Backend and EJS for front-end",
+        imgSrc:"./assets/images/potato-blog.png",
+        srcCode:"https://github.com/Reyzartz/Potato-Blog-a-Random-blog-website",
+        link:""
+
+    },
+    {
+        name:"Anonyomus-Dairy",
+        description:"A MERN Stack based multiuser website. where user can add and delete a post if logged in. They can also view everyone's post without login or signup.",
+        imgSrc:"./assets/images/anonyomus-dairy.png",
+        srcCode:"https://github.com/Reyzartz/Anonyomus-Dairy",
+        link:""
+
     },
     {
         name: "React-and-firebase-instant-messaging-application",
